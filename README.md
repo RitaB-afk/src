@@ -12,7 +12,7 @@ Chapter 3- Create an abstract class named Book. Include a String field for the
  that you can create both a Fiction and a NonFiction Book,
  and display their fields. Save the files as Book.java, Fiction.java,
  NonFiction.java, and UseBook.java.
-chapter 6- TryToPArseDoubleThe Double.parseDouble() method requires a String argument, but
+**chapter 6- TryToPArseDoubleThe Double.parseDouble() method requires a String argument, but
  it fails if the String cannot be converted to a floating-point number.
  Write an application in which you try accepting a double input from
  a user and catch a NumberFormatException if one is thrown. The
@@ -26,3 +26,15 @@ chapter 6- TryToPArseDoubleThe Double.parseDouble() method requires a String arg
  display an appropriate message, and then store a 0 for the student’s
  score. At the end of the application, display all the student IDs and
  scores. Save the files as ScoreException.java and TestScore.java.
+ - Write an application that displays a series of at least eight student ID
+ numbers (that you have stored in an array) and asks the user to enter
+ a test letter grade for the student. Create an Exception class named
+ GradeException that contains a static public array of valid grade letters
+ (A, B, C, D, F, and I) that you can use to determine whether
+ a grade entered from the application is valid. In your application,
+ throw a GradeException if the user does not enter a valid letter grade.
+ Catch the GradeException, and then display an appropriate message.
+ In addition, store an I (for Incomplete) for any student for whom an
+ exception is caught. At the end of the application, display all the
+ student IDs and grades.Save the files as GradeException.java and
+ TestGrade.java.
