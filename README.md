@@ -42,3 +42,8 @@ Chapter 3- Create an abstract class named Book. Include a String field for the
    - Create a file using any word-processing program or text editor. Write
    an application that displays the file’s name, containing folder, size,
    and time of last modification. Save the file as FileStatistics.java.
+   -2. Create three files of any type you choose—for example, word-processing
+     documents, spreadsheets, or pictures. Write an application that determines
+     whether the first two files are located in the same folder as
+     the third one. Test the program when the files are in the same folder
+     and when they are not. Save the file as CompareFolders.java.  
