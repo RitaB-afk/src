@@ -38,3 +38,7 @@ Chapter 3- Create an abstract class named Book. Include a String field for the
  exception is caught. At the end of the application, display all the
  student IDs and grades.Save the files as GradeException.java and
  TestGrade.java.
+   ** Chapter 7
+   - Create a file using any word-processing program or text editor. Write
+   an application that displays the file’s name, containing folder, size,
+   and time of last modification. Save the file as FileStatistics.java.
