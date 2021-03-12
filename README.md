@@ -47,3 +47,8 @@ Chapter 3- Create an abstract class named Book. Include a String field for the
      whether the first two files are located in the same folder as
      the third one. Test the program when the files are in the same folder
      and when they are not. Save the file as CompareFolders.java.  
+  3. Create a file that contains a line of your favorite song lyric. Use a text
+       editor such as Notepad, and save the file. Copy the file contents, and
+       paste them into a word-processing program such as Word. Write an
+       application that displays the sizes of the two files as well as the ratio of
+       their sizes to each other. Save the file as FileSizeComparison.java.
