@@ -52,3 +52,7 @@ Chapter 3- Create an abstract class named Book. Include a String field for the
        paste them into a word-processing program such as Word. Write an
        application that displays the sizes of the two files as well as the ratio of
        their sizes to each other. Save the file as FileSizeComparison.java.
+4. Write an application that determines which, if any, of the following files
+   are stored in the folder where you have saved the exercises created in
+   this chapter: autoexec.bat, CompareFolders.java, FileStatistics.class,
+   and Hello.doc. Save the file as FindSelectedFiles.java.
