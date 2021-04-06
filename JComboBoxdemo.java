@@ -1,12 +1,17 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
-public class JComboBoxdemo extends JFrame{
+public class JComboBoxdemo extends JFrame implements ItemListener {
     String [] ColorChoice= {"Blue", "Yellow", "Red","White", "Black"};
     JComboBox ChooseColor= new JComboBox(ColorChoice);
 
 
     JLabel BoxLabel= new JLabel("Choose or enter your favorite color");
+    JButton Enter= new JButton("Enter");
 
     public JComboBoxdemo()
     {
@@ -17,7 +22,9 @@ public class JComboBoxdemo extends JFrame{
         BoxLabel.setFont(new Font("Arial", Font.ITALIC, 22));
         add(BoxLabel);
         add(ChooseColor);
-        
+        add(Enter);
+        ChooseColor.addItemListener(this);
+
 
     }
     public static void main(String[] args){
@@ -27,6 +34,12 @@ public class JComboBoxdemo extends JFrame{
         frame.setSize(WIDTH, HEIGHT);
         frame.setVisible(true);
 
+
     }
 
+    @Override
+    public void itemStateChanged(ItemEvent e) {
+     String chosen= (String) ChooseColor.getSelectedItem();
+     JOptionPane.showMessageDialog(null,chosen);
+    }
 }
