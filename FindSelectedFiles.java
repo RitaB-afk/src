@@ -1,31 +1,27 @@
-import java.io.*;
-import java.nio.file.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class FindSelectedFiles {
 
-    public static void main(String[] args)
-    {
-        Path [] arr= {Path.of("C:\\Users\\Rita.DESKTOP-NDQVPRR\\IdeaProjects\\testintellij\\src\\autoexec.bat"),Path.of("C:\\Users\\Rita.DESKTOP-NDQVPRR\\IdeaProjects\\testintellij\\src\\CompareFolders.java"),
-                Path.of("C:\\Users\\Rita.DESKTOP-NDQVPRR\\IdeaProjects\\testintellij\\src\\FileStatistics.class"),Path.of("C:\\Users\\Rita.DESKTOP-NDQVPRR\\IdeaProjects\\testintellij\\src\\Hello.doc")};
+public static void main(String[] args) {
 
-        InputStream input= null;
-        for(int x=0; x<arr.length; x++) {
-            try {
+    Path file1= Paths.get("autoexec.bat");
+    Path file2= Paths.get("CompareFolders.java");
+    Path file3= Paths.get("FileStatistics.class");
+    Path file4= Paths.get("Hello.doc");
 
-                input = Files.newInputStream(arr[x]);
-                BufferedReader reader = new BufferedReader(new InputStreamReader(input));
-                String s = null;
-                s = reader.readLine();
-                System.out.println(arr[x]+" this document exists " + s);
-                input.close();
-            } catch (NoSuchFileException e) {
-                System.out.println(arr[x]+" :No such file or directory");
-            } catch (IOException e) {
-                System.out.println("IO exception");
+    Path [] arr= {file1, file2, file3, file4};
+    for (int x=0; x<arr.length; x++) {
+        try {
 
-            }
+            arr[x].getFileSystem().provider().checkAccess(arr[x]);
+            System.out.println("the file " + arr[x].getFileName() + " do exist");
+
+
+        } catch (Exception e) {
+           System.out.println("the file "+ arr[x].getFileName() +" do not exist");
         }
-
-
     }
+
+}
 }

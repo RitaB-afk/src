@@ -1,27 +1,37 @@
-import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Scanner;
 
 public class CompareFolders {
-    private static final String New_Line= System.lineSeparator();
+public static void main(String[] args) {
 
-    public static void main (String[] args) throws IOException {
+    Scanner input= new Scanner(System.in);
+    System.out.println("Enter a filename");
+    String name = input.nextLine();
+    Path inputPath1= Paths.get(name);
+    Path fullPath1= inputPath1.toAbsolutePath();
+    Path file1 = Paths.get("C:\\Users\\Rita.DESKTOP-NDQVPRR\\OneDrive\\Bureau\\Objectoriented programming 2\\what.docx");
+    Path file2 = Paths.get("C:\\Users\\Rita.DESKTOP-NDQVPRR\\OneDrive\\Bureau\\Objectoriented programming 2\\spreadsheet.xlsx");
+    Path file3 = Paths.get("C:\\Users\\Rita.DESKTOP-NDQVPRR\\OneDrive\\Bureau\\Objectoriented programming 2\\obj.txt");
 
-        Path path1= Paths.get("C:\\Users\\Rita.DESKTOP-NDQVPRR\\OneDrive\\Bureau\\Objectoriented programming 2\\test1.docx");
-        Path path2= Paths.get("C:\\Users\\Rita.DESKTOP-NDQVPRR\\OneDrive\\Bureau\\Objectoriented programming 2\\test2.txt");
-        Path path3= Paths.get("C:\\Users\\Rita.DESKTOP-NDQVPRR\\OneDrive\\Bureau\\test3.java");
-        String content = "...";
-        Files.write(path1, content.getBytes(StandardCharsets.UTF_8));
-        Files.write(path2, content.getBytes(StandardCharsets.UTF_8));
-        Files.write(path3, content.getBytes(StandardCharsets.UTF_8));
+    int count1= fullPath1.getNameCount();
+    int count2= file2.getNameCount();
+    int count3= file3.getNameCount();
 
-        if (path1.getParent().equals(path3.getParent()) && path2.getParent().equals(path3.getParent()) )
-        {
-            System.out.println("File 1 and file 2 are in the same folder as file 3.");
-        }
-        else
-        {
-            System.out.println("File 3 is not in the same folder");
-        }
+    Path con1= fullPath1.getName(count1-3);
+    Path con2 = file2.getName(count2-2);
+    Path con3 = file3.getName(count3-2);
+   System.out.println("Full path for the file u entered is "+ fullPath1);
+    System.out.println("The containing folder for " + fullPath1.getFileName()+ " is"+ con1);
+    System.out.println("The containing folder for " + file2.getFileName()+ " is"+ con2);
+    System.out.println("The containing folder for " + file3.getFileName()+ " is"+ con3);
+
+    if(con1.equals(con2) && con2.equals(con3)) {
+        System.out.println("The three files are all in the same folder");
     }
+    else {
+        System.out.println("The files are not in the same folder");
+    }
+
+}
 }
