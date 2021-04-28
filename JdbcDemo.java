@@ -15,7 +15,7 @@ public class JdbcDemo {
 		
 		String dbUrl = "jdbc:mysql://localhost:3306/demo";
 		String user = "root";
-		String pass = "Password";
+		String pass = "A5gtrw6e";
 
 		try {
 			// 1. Get a connection to database

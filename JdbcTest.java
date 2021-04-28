@@ -15,7 +15,7 @@ public class JdbcTest {
 		
 		try {
 			// 1. Get a connection to database
-			myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "root" , "Password");
+			myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "root" , "A5gtrw6e");
 			
 			System.out.println("Database connection successful!\n");
 			
